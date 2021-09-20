@@ -44,4 +44,6 @@
 	- Có hai loại reset: Hard và soft:
 		+ Soft: Khi reset các file mới chuyển trạng thái modified và các file cũ đã thay đổi nội dung quay về nội dung dựa vào mã log
 		+ Hard: Khi reset các file mới đều bị xoá sạch chỉ chừa lại các file cũ với nội dung thuộc về mã log đó.
-	
+
+10. git checkout <mã log>
+	- Là kiểm tra các file nào bị thay đổi dựa vào mã log
