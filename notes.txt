@@ -1,0 +1,33 @@
+1. git init:
+	- Là một câu lệnh tạo ra một file tên là .git, trong file này chứa các cấu hình cần thiết để giúp cho việc theo dõi lịch sử thay đổi của 
+	các file, của các thư mục khác có trong thư mục mẹ chứa cái file .git
+	
+2. git clone <url>:
+	- Kéo một remote project về máy của mình
+	
+3. git clone <url> <project name>:
+	- Câu lệnh này giống như git clone nhưng mà project khi clone về sẽ bị thay đổi tên theo <project name> mà ta đặt
+	Ví dụ: git clone http://gitlab.cyberlogitec.com.vn/clt-rd/rpa/mobile/part-auto-distribution.git MyProject
+
+4. Ghi chú 1 (Xem thêm ở hình filesLifeCycle.png):
+	- Khi ta tạo các file mới trong thư mục mẹ chứa .git thì các file đó sẽ chuyển sang status untracked
+	- Khi ta add một file unstracked thì status của nó sẽ thay dổi thành staged
+	- Khi ta clone một repository về thì tất cả các file trong đó là có trạng thái là unmodified
+	- Khi ta xoá một cái file đi thì cái file đó về trạng thái untracked (không được theo dõi nữa)
+	- Với một file mà ta không xoá mà thay đổi nội dung bên trong thì nó chuyển sang trạng thái là modified
+	- Với một file đã được sửa đổi mà ta sử dụng git add thì nó sẽ chuyển sang trạng thái là Staged (tức là đánh index cho nó)
+	- Với một file đang ở trạng thái staged mà ta commit nó thì nó chuyển về trạng thái unmodified
+
+5. git status:
+	- Được dùng để kiểm tra trạng thái các file trong folder chứa .git thuộc trạng thái nào
+	- Với những file có trạng thái modified thì chúng đã sẵn sàng để được commit
+	Ví dụ: gitStatusCommand.png
+
+6. git add:
+	- git add . : add toàn bộ các file mới vào để chuẩn bị commit
+	- git add -u: chỉ add các file bị thay đổi với trạng thái modified
+	- git add -A: add các file mới, file cũ bị sửa đổi
+
+7. git commit:
+	- Xác nhận chính thức các file đã được đánh index, tức là trong trạng thái sẵn sàng, và lưu lại bản sao trạng thái của các file này
+	
