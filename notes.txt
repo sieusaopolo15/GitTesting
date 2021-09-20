@@ -46,4 +46,11 @@
 		+ Hard: Khi reset các file mới đều bị xoá sạch chỉ chừa lại các file cũ với nội dung thuộc về mã log đó.
 
 10. git checkout <mã log>
-	- Là kiểm tra các file nào bị thay đổi dựa vào mã log
+	- Là quay về phiên làm việc dựa vào mã log như git reset và để quay lại trạng thái sau khi checkout thì ta chọn mã log đầu tiên để quay về
+	- git checkout <branch_name>: để di chuyển giữa các nhánh
+	
+11. git branch
+	- git branch: Xem tất cả các nhánh có trong repository
+	- git branch <brance_name>: tạo một nhánh mới với tên không bị trùng lắp
+	- git branch -m <tên_branch_cần_đổi> <tên_mới>
+	
