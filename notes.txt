@@ -48,6 +48,7 @@
 10. git checkout <mã log>
 	- Là quay về phiên làm việc dựa vào mã log như git reset và để quay lại trạng thái sau khi checkout thì ta chọn mã log đầu tiên để quay về
 	- git checkout <branch_name>: để di chuyển giữa các nhánh
+	- git checkout -b <branch_name>: Vừa tạo nhánh vừa chuyển sang nhánh vừa tạo
 	
 11. git branch
 	- git branch: Xem tất cả các nhánh có trong repository
