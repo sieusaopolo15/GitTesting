@@ -30,8 +30,10 @@
 
 7. git commit:
 	- Xác nhận chính thức các file đã được đánh index, tức là trong trạng thái sẵn sàng, và lưu lại bản sao trạng thái của các file này
-	- git commit -m "message": commit với message cụ thể hoặc một thông tin nào đó cho việc commit này
-	- git commit -a -m "message": là tối giản của:
+	- git commit -m "message": commit kèm theo ghi chú về lần commit này
+	- git commit -a -m "message": là tối giản cho:
 		+ git add -A
-		+ git commit -m "Something new just added"
-	- 
+		+ git commit -m "message"
+
+8. git log:
+	- Hiện ra các lịch sử commit trong thư mục mẹ chứa .git
