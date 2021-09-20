@@ -37,3 +37,11 @@
 
 8. git log:
 	- Hiện ra các lịch sử commit trong thư mục mẹ chứa .git
+	- git log --oneline: hiện tất cả lịch sử thành 1 dòng duy nhất, tức là không có người commit, không có ngày tháng năm giờ commit
+
+9. git reset <mã log> (mã log lấy từ git log)
+	- Là quay trở lại commit ở mã log đó
+	- Có hai loại reset: Hard và soft:
+		+ Soft: Khi reset các file mới chuyển trạng thái modified và các file cũ đã thay đổi nội dung quay về nội dung dựa vào mã log
+		+ Hard: Khi reset các file mới đều bị xoá sạch chỉ chừa lại các file cũ với nội dung thuộc về mã log đó.
+	
