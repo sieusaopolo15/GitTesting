@@ -26,7 +26,7 @@
 6. git add:
 	- git add . : add toàn bộ các file mới vào để chuẩn bị commit
 	- git add -u: chỉ add các file bị thay đổi với trạng thái modified
-	- git add -A: add các file mới, file cũ bị sửa đổi
+	- git add -A: add tất cả các file ngoại trừ file có trạng thái untracked và unmodified
 
 7. git commit:
 	- Xác nhận chính thức các file đã được đánh index, tức là trong trạng thái sẵn sàng, và lưu lại bản sao trạng thái của các file này
@@ -54,4 +54,9 @@
 	- git branch: Xem tất cả các nhánh có trong repository
 	- git branch <brance_name>: tạo một nhánh mới với tên không bị trùng lắp
 	- git branch -m <tên_branch_cần_đổi> <tên_mới>
+	
+12. push project:
+	- git remote set-url origin <url>
+	- git push origin <brance_name>: Đẩy local project lên remote repository dựa trên remote set-url ở trên
+	- git remote -v: xem tất cả các remote hiện có
 	
