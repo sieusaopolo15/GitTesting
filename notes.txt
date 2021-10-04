@@ -38,6 +38,8 @@
 8. git log:
 	- Hiện ra các lịch sử commit trong thư mục mẹ chứa .git
 	- git log --oneline: hiện tất cả lịch sử thành 1 dòng duy nhất, tức là không có người commit, không có ngày tháng năm giờ commit
+	- git log --name-status: Hiển thị lịch sử thay đổi file và người thay đổi
+	- git log --name-status -<number>: hiển thị số lượng log trên console tính từ lần thay đổi gần nhất
 
 9. git reset <mã log> (mã log lấy từ git log)
 	- Là quay trở lại commit ở mã log đó
@@ -54,9 +56,25 @@
 	- git branch: Xem tất cả các nhánh có trong repository
 	- git branch <brance_name>: tạo một nhánh mới với tên không bị trùng lắp
 	- git branch -m <tên_branch_cần_đổi> <tên_mới>
+	- git branch -f <brance_name> <commit_name>: di chuyển nhánh tới commit được xác định
 	
 12. push project:
+	- git remote add <tên_remote> <tên_url>: thêm mới một remote
 	- git remote set-url origin <url>
 	- git push origin <brance_name>: Đẩy local project lên remote repository dựa trên remote set-url ở trên
 	- git remote -v: xem tất cả các remote hiện có
 	
+13. git pull
+	- git pull <url> hoặc git pull origin <branch_name> (cách này chỉ làm được khi set git remote)
+	
+14. set email, username trong một repo
+	- git config user.email "MY_NAME@example.com"
+	- git config user.name "FIRST_NAME LAST_NAME"
+	
+15. set email, username cho toàn bộ repo
+	- git config --global user.email "MY_NAME@example.com"
+	- git config --global user.name "FIRST_NAME LAST_NAME"
+
+16. Trước khi update project mới về thì ta muốn xem các file sắp thay đổi như sau:
+	- git fetch
+	- git log --name-status origin/master..
