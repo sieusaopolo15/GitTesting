@@ -77,4 +77,28 @@
 
 16. Trước khi update project mới về thì ta muốn xem các file sắp thay đổi như sau:
 	- git fetch
-	- git log --name-status origin/master..
+	- git log --name-status origin/master
+	
+17. Tách nhánh trong git:
+	- Khi một nhánh được sinh ra tại một commit từ nhánh cha thì cái nhánh đó sẽ luôn tồn tại tại commit đó
+	- Khi ta tạo commit nên nhớ là phải tạo ở commit nào bởi vì mỗi một commit đóng vai trò là một node cha trong git tree
+	- origin/tên_nhánh: tức là khi ta push repository ở nhánh nào thì hệ thống sẽ lưu lại dữ liệu push và lưu nó thành một entity
+	- Mỗi nhánh chỉ tồn tại duy nhất một cha và ta có thể di chuyển con trỏ HEAD đi lại giữa các nhánh 
+
+18. git merge
+	- Muốn merge ở branch nào thì đứng ở branch đó merge với branch khác
+	- Cú pháp:
+		+ git merge <tên_nhánh>: merge một nhánh
+		+ git merge <tên_nhánh 1> <tên_nhánh 2> ...: merge nhiều nhánh
+	- Nếu có xảy ra conflict thì ta xử lý conflict. Sau khi xử lý xong ta xài lệnh git add . rồi git commit để việc hoàn thành merging
+	
+19. git rebase
+	- Cú pháp:
+		+ git rebase <tên_nhánh>
+	- Giống như merge, đứng ở nhánh master rebase branch về
+	- Rebase là nối commit, tức là khi ta nối nhánh thì nhánh tiếp theo được tạo ra sẽ là master nhưng nhánh vẫn được phân biệt rõ ràng không trùng lắp
+	- Việc nối nhánh cũng có thể xảy ra conflict và việc xử lý conflict cũng tương tự như merge. Sau khi add và commit xong ta ghi git rebase --continue để
+	 kết thúc
+	- Chỉ có commit của nhánh cuối cùng là được lưu lại còn commit của các nhánh đã rebase trước đó không có lưu lại. Ngoài ra các commit của nhánh cuối cùng
+	 rebase trước khi được rebase vào master sẽ được ghi vào lịch sử commit của master và đứng ở đầu lịch sử commit sẽ là commit của rebase, sau đó mới tới
+	 các commit của nhánh cuối cùng đó
